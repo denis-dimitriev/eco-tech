@@ -1,0 +1,67 @@
+{
+  "user": {
+    "login": "Войти",
+    "register": "Зарегистрироваться",
+    "exit": "Выйти",
+    "email_or_tel": "Эл. почта или телефон",
+    "password": "Пароль",
+    "forgot_password": "Забыли пароль?",
+    "remember_me": "Запомнить меня",
+    "name": "Имя",
+    "email": "Эл. почта",
+    "number_of_tel": "Номер телефона",
+    "general_information": "Общие сведения",
+    "personal_data": "Личные данные",
+    "purchase_history": "История покупок",
+    "favorites": "Избранное",
+    "change_password": "Сменить пароль"
+  },
+  "store": {
+    "news": "Новости",
+    "search": "Поиск",
+    "more": "Подробнее",
+    "reviews": "Отзывы",
+    "our_advantages": "Наши преимущества",
+    "jobs": "Вакансии",
+    "enter": "Вход",
+    "registration": "Регистрация",
+    "shopping_hours": "Пн-сб: с 10:00 до 21:00"
+  },
+  "menu": {
+    "catalog": "Каталог товаров",
+    "about": "О компании",
+    "promo": "Акции",
+    "credit": "Рассрочка",
+    "wholesale": "Опт",
+    "service_and_warranty": "Сервис и гарантия",
+    "contacts": "Контакты"
+  },
+  "catalog": {
+    "gyro_scooters": "Гироскутеры",
+    "electric_scooters": "Электросамокаты",
+    "mono_wheels": "Моноколеса",
+    "segways": "Сегвеи",
+    "electric_bikes": "Электроскутеры",
+    "electric_bicycles": "Электровелосипеды",
+    "electric_skateboards": "Электроскейты",
+    "accessories": "Аксессуары",
+    "smart_watch": "Smart Watch"
+  },
+  "products": {
+    "bestsellers": "Хиты продаж",
+    "new": "Новинки",
+    "all": "Все товары"
+  },
+  "product": {
+    "bestseller": "Хит продаж",
+    "new": "Новинка"
+  },
+  "customer": {
+    "for": "Для клиента",
+    "how_to_buy": "Как купить",
+    "shipping_and_payment": "Доставка и оплата",
+    "credit": "Кредит",
+    "privacy_policy": "Политика конфиденциальности",
+    "service_and_warranty": "Сервис и гарантия"
+  }
+}

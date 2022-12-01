@@ -1,0 +1,67 @@
+{
+  "user": {
+    "login": "Intra",
+    "register": "Inregistreaza-te",
+    "exit": "Ieșire",
+    "email_or_tel": "E-mail sau telefon",
+    "password": "Parola",
+    "forgot_password": "Ti-ai uitat parola?",
+    "remember_me": "Memorizeazama",
+    "name": "Nume",
+    "email": "E-mail",
+    "number_of_tel": "Număr de telefon",
+    "general_information": "Informatii generale",
+    "personal_data": "Date personale",
+    "purchase_history": "Istoria cumparaturilor",
+    "favorites": "Favorite",
+    "change_password": "Schimbaţi parola"
+  },
+  "store": {
+    "news": "Noutati",
+    "search": "\nCăutare",
+    "more": "Mai mult",
+    "reviews": "Recenzii",
+    "our_advantages": "Avantajele noastre",
+    "jobs": "Joburi",
+    "enter": "Intrare",
+    "registration": "Înregistrare",
+    "shopping_hours": "Luni-Sâmbătă: 10:00 - 21:00"
+  },
+  "menu": {
+    "catalog": "Catalog de produse",
+    "about": "Despre companie",
+    "promo": "Promotii",
+    "credit": "In rate",
+    "wholesale": "Angro",
+    "service_and_warranty": "Service si Garantie",
+    "contacts": "Contacte"
+  },
+  "catalog": {
+    "gyro_scooters": "Gyroscuterele",
+    "electric_scooters": "Trotinete electrice",
+    "mono_wheels": "Monoroți",
+    "segways": "Segway-uri",
+    "electric_bikes": "Scootere  electrice",
+    "electric_bicycles": "\nBiciclete electrice",
+    "electric_skateboards": "Skateboard-uri electrice",
+    "accessories": "Accesorii",
+    "smart_watch": "Smart Watch"
+  },
+  "products": {
+    "bestsellers": "Hituri vanzari",
+    "new": "Nou in stock",
+    "all": "Toate produsele"
+  },
+  "product": {
+    "bestseller": "Hit vanzari",
+    "new": "Nou in stock"
+  },
+  "customer": {
+    "for": "Pentru client",
+    "how_to_buy": "Cum să cumperi",
+    "shipping_and_payment": "Livrare si plata",
+    "credit": "Credit",
+    "privacy_policy": "Politica de Confidențialitate",
+    "service_and_warranty": "Service si Garantie"
+  }
+}

@@ -15,11 +15,16 @@ module.exports = {
       },
       animation: {
         fadeIn: "fadeIn 300ms ease-in-out",
+        fadeOut: "fadeOut 300ms ease-in-out",
       },
       keyframes: {
         fadeIn: {
-          "0%": { transform: "translateX(-100%)" },
-          "100%": { transform: "translateX(0)" },
+          "0%": { transform: "translateY(-100%)" },
+          "100%": { transform: "translateY(0)" },
+        },
+        fadeOut: {
+          "0": { transform: "translateY(0)" },
+          "100%": { transform: "translateY(-100%)" },
         },
       },
     },
@@ -40,13 +45,21 @@ module.exports = {
         },
         header: {
           position: "fixed",
+          width: "100%",
+          height: "140px",
           top: 0,
           left: 0,
           right: 0,
           zIndex: 100,
+          transition: "transform 0.4s cubic-bezier(0.8, 0.2, 0.2, 0.8)",
         },
         footer: {
           marginTop: "auto",
+        },
+        svg: {
+          width: "20px",
+          height: "20px",
+          fill: "black",
         },
       });
     }),
