@@ -11,7 +11,7 @@ export const HeaderTop = () => {
         <Logo
           className={`${
             transform && "translate-y-full opacity-0"
-          } transition-all duration-500`}
+          } transition-all duration-200`}
         />
         <TelNumber />
         <ShoppingHours />
@@ -20,7 +20,7 @@ export const HeaderTop = () => {
         <UserActions
           className={`${
             transform && "translate-y-full opacity-0"
-          } duration-500\`} transition-all duration-500`}
+          } duration-500\`} transition-all duration-200`}
         />
       </div>
     </div>

@@ -46,7 +46,7 @@ const Layout = () => {
   return (
     <div
       id="layout"
-      className="layout relative relative flex h-[10000px] flex-col"
+      className="layout relative relative flex min-h-[140vh] flex-col"
     >
       <Header />
       <main className="container">

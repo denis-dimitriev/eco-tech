@@ -30,7 +30,7 @@ module.exports = {
     },
   },
   plugins: [
-    plugin(function ({ addComponents }) {
+    plugin(function({ addComponents }) {
       addComponents({
         ".layout": {
           width: "100%",
@@ -60,6 +60,17 @@ module.exports = {
           width: "20px",
           height: "20px",
           fill: "black",
+        },
+        ".search": {
+          width: "100%",
+          padding: "8px 10px 8px 40px",
+        },
+        ".backdrop": {
+          width: "100vw",
+          height: "100vh",
+          backgroundColor: "#4878A6",
+          zIndex: 199,
+          opacity: "0.6",
         },
       });
     }),

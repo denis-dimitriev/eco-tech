@@ -1,7 +1,10 @@
 import { useAppSelector } from "../../../hooks/hooks";
 import { NavLink } from "react-router-dom";
+import { FC, HTMLProps } from "react";
 
-export const MainNav = () => {
+interface Props extends HTMLProps<HTMLUListElement> {}
+
+export const MainNav: FC<Props> = ({ className }) => {
   const t = useAppSelector((state) => state.translation.language);
 
   const links = [
@@ -14,7 +17,7 @@ export const MainNav = () => {
   ];
 
   return (
-    <ul className="flex gap-x-[40px] p-6">
+    <ul className={`${className} flex gap-[40px] p-6`}>
       {links.map((link) => (
         <li key={link.path}>
           <NavLink to={link.path}>{link.name}</NavLink>

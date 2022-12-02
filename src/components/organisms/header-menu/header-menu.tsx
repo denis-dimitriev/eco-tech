@@ -1,7 +1,7 @@
 import { CatalogButton } from "../../atoms/ui/catalog-button/catalog-button";
 import { useAppSelector } from "../../../hooks/hooks";
 import { Logo } from "../../atoms/ui";
-import { MainNav, UserActions } from "../../molecules";
+import { MainNav, SearchForm, UserActions } from "../../molecules";
 
 export const HeaderMenu = () => {
   const transform = useAppSelector((state) => state.transform.headerTransform);
@@ -16,15 +16,16 @@ export const HeaderMenu = () => {
         <Logo
           className={`${
             transform ? "block animate-fadeIn" : "hidden"
-          } transition-all duration-500`}
+          } transition-all duration-200`}
         />
         <CatalogButton />
-        <MainNav />
+        <MainNav className={`${transform && "hidden"}`} />
+        {transform && <SearchForm className="w-1/2" />}
         {transform && (
           <UserActions
             className={`${
               transform ? "block animate-fadeIn" : "hidden"
-            } transition-all duration-500`}
+            } transition-all duration-200`}
             icoFill={"white"}
           />
         )}

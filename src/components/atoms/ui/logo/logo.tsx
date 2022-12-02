@@ -8,7 +8,7 @@ export const Logo: FC<Props> = ({ className }) => {
     <Link
       to="/"
       className={` ${className}
-        flex items-center font-[logoFont] text-3xl font-[900] uppercase drop-shadow transition-all
+        w-[120px] font-[logoFont] text-3xl font-[900] uppercase drop-shadow transition-all
       `}
     >
       Nova Seller
