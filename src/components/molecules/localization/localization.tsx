@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { localeType } from "../../../types/general";
-import { useAppDispatch } from "../../../hooks/hooks";
-import { setLanguage } from "../../../features/translation/translations.slice";
+import { useAppDispatch } from "../../../hooks/redux";
+import { setLanguage } from "../../../features/translations.slice";
 
 export const Localization = () => {
   const [locale, setLocale] = useState<localeType>("RU");

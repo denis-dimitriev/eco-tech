@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { SearchIcon } from "../../../../assets/icons";
-import { useAppSelector } from "../../../../hooks/hooks";
+import { useAppSelector } from "../../../../hooks/redux";
 
 export const Search = () => {
   const t = useAppSelector((state) => state.translation.language);

@@ -66,11 +66,10 @@ module.exports = {
           padding: "8px 10px 8px 40px",
         },
         ".backdrop": {
-          width: "100vw",
-          height: "100vh",
-          backgroundColor: "#4878A6",
-          zIndex: 199,
-          opacity: "0.6",
+            width: "100%",
+            height: "100vh",
+            backgroundColor: "rgba(72, 120, 166, 0.6)",
+            zIndex: 199,
         },
       });
     }),

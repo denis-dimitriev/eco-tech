@@ -1,12 +1,12 @@
 import { Logo, Search, ShoppingHours, TelNumber } from "../../atoms/ui";
 import { Localization, UserActions } from "../../molecules";
-import { useAppSelector } from "../../../hooks/hooks";
+import { useAppSelector } from "../../../hooks/redux";
 
 export const HeaderTop = () => {
   const transform = useAppSelector((state) => state.transform.headerTransform);
 
   return (
-    <div className="flex h-[80px] w-full">
+    <div className="flex h-[80px] w-full bg-white">
       <div className="container flex items-center justify-between">
         <Logo
           className={`${

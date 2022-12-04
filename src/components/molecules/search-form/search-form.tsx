@@ -1,5 +1,5 @@
 import { ChangeEvent, FC, FormEvent, HTMLProps, useState } from "react";
-import { useAppSelector } from "../../../hooks/hooks";
+import { useAppSelector } from "../../../hooks/redux";
 import { SearchIcon } from "../../../assets/icons";
 
 interface Props extends HTMLProps<HTMLFormElement> {}
@@ -27,14 +27,14 @@ export const SearchForm: FC<Props> = ({ className }) => {
       </div>
       <input
         type="text"
-        className="search block w-full rounded border bg-gray-100 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500"
+        className="search block w-full rounded border bg-gray-100 text-gray-900 focus:border-blue-500 focus:ring-blue-500"
         placeholder={`... ${t.store.search}`}
         value={term}
         onChange={onInputChangeHandler}
       />
       <button
         type="submit"
-        className="absolute top-0 right-0 rounded-r border border-blue-700 bg-blue-700 py-2 px-3 hover:bg-blue-800 focus:outline-none"
+        className="absolute top-0 right-0 rounded-r border border-blue-700 bg-blue-700 py-2.5 px-4 hover:bg-blue-800 focus:outline-none"
       >
         <SearchIcon className="h-[20px] w-[20px] fill-white" />
       </button>

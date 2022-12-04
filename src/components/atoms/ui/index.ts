@@ -5,3 +5,5 @@ export * from "./search/search";
 export * from "./shopping-hours/shopping-hours";
 export * from "./ico-link/ico-link";
 export * from "./tel-number/tel-number";
+export * from "./input/input";
+export * from "./close-button/close-button";

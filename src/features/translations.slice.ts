@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { RO, RU } from "../../../translations";
-import { localeType } from "../../types/general";
+import { RO, RU } from "../../translations";
+import { localeType } from "../types/general";
 
 interface IState {
   language: typeof RO | typeof RU;

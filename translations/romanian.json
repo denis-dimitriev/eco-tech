@@ -1,13 +1,16 @@
 {
   "user": {
     "login": "Intra",
+    "enter": "Intrare",
     "register": "Inregistreaza-te",
+    "registration": "Înregistrare",
     "exit": "Ieșire",
     "email_or_tel": "E-mail sau telefon",
     "password": "Parola",
     "forgot_password": "Ti-ai uitat parola?",
-    "remember_me": "Memorizeazama",
-    "name": "Nume",
+    "confirm_password": "Confirmă parola",
+    "remember_me": "Ține-mă minte",
+    "name": "Nume utilizator",
     "email": "E-mail",
     "number_of_tel": "Număr de telefon",
     "general_information": "Informatii generale",

@@ -1,5 +1,5 @@
 import { MenuIcon } from "../../../../assets/icons";
-import { useAppSelector } from "../../../../hooks/hooks";
+import { useAppSelector } from "../../../../hooks/redux";
 
 export const CatalogButton = () => {
   const t = useAppSelector((state) => state.translation.language);

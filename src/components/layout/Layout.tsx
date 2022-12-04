@@ -1,11 +1,12 @@
 import { Outlet } from "react-router-dom";
-import { Header } from "../organisms/header/Header";
+import { Header } from "../organisms";
 import { useCallback, useEffect } from "react";
-import { useAppDispatch } from "../../hooks/hooks";
+import { useAppDispatch, useAppSelector } from "../../hooks/redux";
 import { setTransformHeader } from "../../features/header-slice";
 
 const Layout = () => {
   const dispatch = useAppDispatch();
+  const backdrop = useAppSelector((state) => state.backdrop.isOpen);
 
   const handleScroll = useCallback(
     (event: WheelEvent) => {
@@ -17,7 +18,8 @@ const Layout = () => {
       if (layoutHeight > windowsHeight) {
         event.deltaY > 0 && dispatch(setTransformHeader(true));
       }
-      if (layoutTop === 0) {
+
+      if (layoutTop > -50) {
         dispatch(setTransformHeader(false));
       }
     },
@@ -43,13 +45,16 @@ const Layout = () => {
     };
   }, [handleScroll]);
 
+  useEffect(() => {
+    if (backdrop) {
+      document.body.style.overflow = "hidden";
+    }
+  }, [backdrop]);
+
   return (
-    <div
-      id="layout"
-      className="layout relative relative flex min-h-[140vh] flex-col"
-    >
+    <div id="layout" className="layout relative flex min-h-[100vh] flex-col">
       <Header />
-      <main className="container">
+      <main>
         <Outlet />
       </main>
     </div>

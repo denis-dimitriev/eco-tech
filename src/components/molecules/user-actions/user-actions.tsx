@@ -30,7 +30,7 @@ export const UserActions: FC<Props> = ({ icoFill, className }) => {
         <CartIcon className={`${icoFill && "fill-white"}`} />
       </IcoLink>
 
-      <JoinUsButton />
+      <JoinUsButton view={"link"} className="h-[42px] w-[98px]" />
     </div>
   );
 };

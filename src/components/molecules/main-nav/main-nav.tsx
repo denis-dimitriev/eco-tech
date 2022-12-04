@@ -1,4 +1,4 @@
-import { useAppSelector } from "../../../hooks/hooks";
+import { useAppSelector } from "../../../hooks/redux";
 import { NavLink } from "react-router-dom";
 import { FC, HTMLProps } from "react";
 

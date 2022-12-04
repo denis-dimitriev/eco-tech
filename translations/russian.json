@@ -1,13 +1,16 @@
 {
   "user": {
     "login": "Войти",
+    "enter": "Вход",
     "register": "Зарегистрироваться",
+    "registration": "Регистрация",
     "exit": "Выйти",
     "email_or_tel": "Эл. почта или телефон",
     "password": "Пароль",
     "forgot_password": "Забыли пароль?",
+    "confirm_password": "Подтвердить gароль",
     "remember_me": "Запомнить меня",
-    "name": "Имя",
+    "name": "Имя пользователя",
     "email": "Эл. почта",
     "number_of_tel": "Номер телефона",
     "general_information": "Общие сведения",

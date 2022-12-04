@@ -1,5 +1,5 @@
 import { CatalogButton } from "../../atoms/ui/catalog-button/catalog-button";
-import { useAppSelector } from "../../../hooks/hooks";
+import { useAppSelector } from "../../../hooks/redux";
 import { Logo } from "../../atoms/ui";
 import { MainNav, SearchForm, UserActions } from "../../molecules";
 

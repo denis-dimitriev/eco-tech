@@ -1,4 +1,4 @@
-import { useAppSelector } from "../../../../hooks/hooks";
+import { useAppSelector } from "../../../../hooks/redux";
 
 export const ShoppingHours = () => {
   const t = useAppSelector((state) => state.translation.language);

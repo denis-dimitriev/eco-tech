@@ -5,6 +5,7 @@ import { ReactComponent as ECarIcon } from "./e-car.svg";
 import { ReactComponent as ESkateIcon } from "./e-skate.svg";
 import { ReactComponent as EScooterIcon } from "./e-scooter.svg";
 import { ReactComponent as EyeIcon } from "./eye.svg";
+import { ReactComponent as EyeOffIcon } from "./eye-off.svg";
 import { ReactComponent as FavoriteIcon } from "./favorite.svg";
 import { ReactComponent as FavoriteRedIcon } from "./favorite-red.svg";
 import { ReactComponent as HoverBoardIcon } from "./hoverboard.svg";
@@ -19,6 +20,7 @@ import { ReactComponent as StarIcon } from "./star.svg";
 import { ReactComponent as StarFilledIcon } from "./star-filled.svg";
 import { ReactComponent as MessageIcon } from "./message.svg";
 import { ReactComponent as SearchIcon } from "./search.svg";
+import { ReactComponent as CloseIcon } from "./close.svg";
 
 export {
   CompareIcon,
@@ -28,6 +30,7 @@ export {
   ESkateIcon,
   EScooterIcon,
   EyeIcon,
+  EyeOffIcon,
   FavoriteIcon,
   FavoriteRedIcon,
   HoverBoardIcon,
@@ -42,4 +45,5 @@ export {
   StarIcon,
   MessageIcon,
   SearchIcon,
+  CloseIcon,
 };
