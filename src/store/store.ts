@@ -1,13 +1,15 @@
 import { configureStore } from "@reduxjs/toolkit";
-import translationSlice from "../features/translations.slice";
-import headerSlice from "../features/header-slice";
-import backdropSlice from "../features/backdrop";
+import TranslationSlice from "../features/translations.slice";
+import HeaderSlice from "../features/header.slice";
+import BackdropSlice from "../features/backdrop.slice";
+import AuthSlice from "../features/auth.slice";
 
 export const store = configureStore({
   reducer: {
-    translation: translationSlice,
-    transform: headerSlice,
-    backdrop: backdropSlice,
+    translation: TranslationSlice,
+    transform: HeaderSlice,
+    backdrop: BackdropSlice,
+    auth: AuthSlice,
   },
 });
 

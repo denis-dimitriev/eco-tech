@@ -1,11 +1,19 @@
-import React, { ChangeEvent, FormEvent, useState } from "react";
+import React, {
+  ChangeEvent,
+  Dispatch,
+  FC,
+  FormEvent,
+  SetStateAction,
+  useState,
+} from "react";
 import { CloseButton, JoinUsButton } from "../../atoms/ui";
 import { useAppDispatch, useAppSelector } from "../../../hooks/redux";
-import { setBackdrop } from "../../../features/backdrop";
+import { setBackdrop } from "../../../features/backdrop.slice";
 import { useNavigate } from "react-router-dom";
 import { Input } from "../../atoms/ui";
 import { Checkbox } from "../../atoms/ui/checkbox/checkbox";
 import { EyeIcon, EyeOffIcon } from "../../../assets/icons";
+import { setIsRegistered } from "../../../features/auth.slice";
 
 type formFields = {
   email: string;
@@ -23,7 +31,8 @@ export const SignInForm = () => {
   const navigate = useNavigate();
   const t = useAppSelector((state) => state.translation.language);
 
-  function onCloseAuthHandler() {
+  function onCloseAuthHandler(e: MouseEvent) {
+    e.preventDefault();
     dispatch(setBackdrop(false));
     navigate("/");
   }
@@ -39,6 +48,8 @@ export const SignInForm = () => {
 
   const onPasswordDisplayHandler = () => setVisiblePassword((prev) => !prev);
 
+  const setSignUpUserHandler = () => dispatch(setIsRegistered(true));
+
   return (
     <form className="flex flex-col" onSubmit={onSubmit}>
       <div className="flex items-center justify-between bg-[#EDF2F6] px-[30px] py-5 phone:p-5">
@@ -53,7 +64,6 @@ export const SignInForm = () => {
           label={t.user.email_or_tel}
           type="email"
           value={formFields.email}
-          required
           onChange={onInputHandler}
         />
         <div className="relative block">
@@ -61,7 +71,6 @@ export const SignInForm = () => {
             label={t.user.password}
             type={visiblePassword ? "text" : "password"}
             value={formFields.password}
-            required
             onChange={onInputHandler}
           />
           <button
@@ -73,7 +82,11 @@ export const SignInForm = () => {
         </div>
         <Checkbox label={t.user.remember_me} />
         <JoinUsButton className="mb-5" />
-        <button type="button" className="text-center text-blue-700">
+        <button
+          type="button"
+          className="text-center text-blue-800 transition-colors hover:text-gray-500"
+          onClick={setSignUpUserHandler}
+        >
           {t.user.register}
         </button>
       </div>

@@ -1,14 +1,28 @@
-import React, { ChangeEvent, FormEvent, useState } from "react";
+import React, {
+  ChangeEvent,
+  Dispatch,
+  FC,
+  FormEvent,
+  SetStateAction,
+  useState,
+} from "react";
 import { CloseButton, Input, JoinUsButton } from "../../atoms/ui";
 import { EyeIcon, EyeOffIcon } from "../../../assets/icons";
 import { Checkbox } from "../../atoms/ui/checkbox/checkbox";
 import { useAppDispatch, useAppSelector } from "../../../hooks/redux";
 import { useNavigate } from "react-router-dom";
-import { setBackdrop } from "../../../features/backdrop";
+import { setBackdrop } from "../../../features/backdrop.slice";
 import PhoneInput, {
   isValidPhoneNumber,
   Value,
 } from "react-phone-number-input/input";
+import {
+  CODE_MD,
+  DEFAULT_INPUT_CLASS,
+  ERROR_INPUT_CLASS,
+  SUCCESS_INPUT_CLASS,
+} from "../../../constants";
+import { setIsRegistered } from "../../../features/auth.slice";
 
 type formFields = {
   email: string;
@@ -38,7 +52,8 @@ export const SignUpForm = () => {
   const navigate = useNavigate();
   const t = useAppSelector((state) => state.translation.language);
 
-  function onCloseAuthHandler() {
+  function onCloseAuthHandler(e: MouseEvent) {
+    e.preventDefault();
     dispatch(setBackdrop(false));
     navigate("/");
   }
@@ -68,7 +83,13 @@ export const SignUpForm = () => {
 
   const onPasswordDisplayHandler = () => setVisiblePassword((prev) => !prev);
 
-  console.log(validTel);
+  const successInput = validTel.success
+    ? SUCCESS_INPUT_CLASS
+    : DEFAULT_INPUT_CLASS;
+
+  const errorInput = validTel.error ? ERROR_INPUT_CLASS : DEFAULT_INPUT_CLASS;
+
+  const setSignInUserHandler = () => dispatch(setIsRegistered(false));
 
   return (
     <form className="flex flex-col" onSubmit={onSubmit}>
@@ -95,16 +116,27 @@ export const SignUpForm = () => {
           onChange={onInputHandler}
         />
 
-        <div className="mb-5 block">
-          <label htmlFor="tel" className="">
+        <div className="relative mb-5 block">
+          <label
+            htmlFor="tel"
+            className={`${validTel.success && "text-green-700"} ${
+              validTel.error && "text-red-700"
+            } mb-2`}
+          >
             {t.user.number_of_tel}
           </label>
+          <span className="absolute left-2 top-[55%]">{CODE_MD}</span>
           <PhoneInput
             id="tel"
-            className="mt-2 w-full rounded border-2 border-solid border-gray-300 py-2.5 pl-4 pr-2.5 focus:border-blue-500 focus:ring-blue-500"
+            className={` ${validTel.success && successInput} ${
+              validTel.error && errorInput
+            }
+              mt-2 w-full rounded border-2 border-solid border-gray-300 py-2.5 pr-2.5 pl-12
+            `}
             value={formFields.tel}
             country="MD"
-            placeholder={"373 690 55 121"}
+            placeholder=" 690 55 121"
+            defaultCountry="MD"
             onChange={(value) => onTelInputHandler(value)}
           />
         </div>
@@ -126,7 +158,11 @@ export const SignUpForm = () => {
         </div>
         <Checkbox label={t.user.remember_me} />
         <JoinUsButton className="mb-5" register />
-        <button type="button" className="text-center text-blue-700">
+        <button
+          type="button"
+          className="text-center text-blue-800 transition-colors hover:text-gray-500"
+          onClick={setSignInUserHandler}
+        >
           {t.user.login}
         </button>
       </div>

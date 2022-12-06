@@ -4,7 +4,7 @@ const initialState = {
   headerTransform: false,
 };
 
-export const headerSlice = createSlice({
+export const HeaderSlice = createSlice({
   name: "headerTransform",
   initialState,
   reducers: {
@@ -14,5 +14,5 @@ export const headerSlice = createSlice({
   },
 });
 
-export const { setTransformHeader } = headerSlice.actions;
-export default headerSlice.reducer;
+export const { setTransformHeader } = HeaderSlice.actions;
+export default HeaderSlice.reducer;

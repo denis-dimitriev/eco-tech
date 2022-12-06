@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import { Header } from "../organisms";
 import { useCallback, useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../../hooks/redux";
-import { setTransformHeader } from "../../features/header-slice";
+import { setTransformHeader } from "../../features/header.slice";
 
 const Layout = () => {
   const dispatch = useAppDispatch();
