@@ -21,6 +21,8 @@ import { ReactComponent as StarFilledIcon } from "./star-filled.svg";
 import { ReactComponent as MessageIcon } from "./message.svg";
 import { ReactComponent as SearchIcon } from "./search.svg";
 import { ReactComponent as CloseIcon } from "./close.svg";
+import { ReactComponent as WarningIcon } from "./warning.svg";
+import { ReactComponent as SuccessIcon } from "./success.svg";
 
 export {
   CompareIcon,
@@ -46,4 +48,6 @@ export {
   MessageIcon,
   SearchIcon,
   CloseIcon,
+  WarningIcon,
+  SuccessIcon,
 };

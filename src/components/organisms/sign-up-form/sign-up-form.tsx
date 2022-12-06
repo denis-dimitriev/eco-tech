@@ -1,6 +1,11 @@
 import React, { ChangeEvent, FormEvent, MouseEvent, useState } from "react";
 import { CloseButton, Input, JoinUsButton } from "../../atoms/ui";
-import { EyeIcon, EyeOffIcon } from "../../../assets/icons";
+import {
+  EyeIcon,
+  EyeOffIcon,
+  SuccessIcon,
+  WarningIcon,
+} from "../../../assets/icons";
 import { Checkbox } from "../../atoms/ui/checkbox/checkbox";
 import { useAppDispatch, useAppSelector } from "../../../hooks/redux";
 import { useNavigate } from "react-router-dom";
@@ -128,10 +133,16 @@ export const SignUpForm = () => {
             `}
             value={formFields.tel}
             country="MD"
-            placeholder=" 690 55 121"
             defaultCountry="MD"
+            placeholder=" 690 55 121"
             onChange={(value) => onTelInputHandler(value)}
           />
+          {validTel.success && (
+            <SuccessIcon className="absolute right-2 top-[55%]" />
+          )}
+          {validTel.error && (
+            <WarningIcon className="absolute right-2 top-[55%]" />
+          )}
         </div>
 
         <div className="relative block">
