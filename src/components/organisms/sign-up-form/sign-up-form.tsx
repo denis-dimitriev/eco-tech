@@ -1,11 +1,4 @@
-import React, {
-  ChangeEvent,
-  Dispatch,
-  FC,
-  FormEvent,
-  SetStateAction,
-  useState,
-} from "react";
+import React, { ChangeEvent, FormEvent, MouseEvent, useState } from "react";
 import { CloseButton, Input, JoinUsButton } from "../../atoms/ui";
 import { EyeIcon, EyeOffIcon } from "../../../assets/icons";
 import { Checkbox } from "../../atoms/ui/checkbox/checkbox";

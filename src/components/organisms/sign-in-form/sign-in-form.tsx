@@ -1,16 +1,8 @@
-import React, {
-  ChangeEvent,
-  Dispatch,
-  FC,
-  FormEvent,
-  SetStateAction,
-  useState,
-} from "react";
-import { CloseButton, JoinUsButton } from "../../atoms/ui";
+import React, { ChangeEvent, FormEvent, MouseEvent, useState } from "react";
+import { CloseButton, Input, JoinUsButton } from "../../atoms/ui";
 import { useAppDispatch, useAppSelector } from "../../../hooks/redux";
 import { setBackdrop } from "../../../features/backdrop.slice";
 import { useNavigate } from "react-router-dom";
-import { Input } from "../../atoms/ui";
 import { Checkbox } from "../../atoms/ui/checkbox/checkbox";
 import { EyeIcon, EyeOffIcon } from "../../../assets/icons";
 import { setIsRegistered } from "../../../features/auth.slice";
